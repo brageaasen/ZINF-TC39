@@ -1,17 +1,21 @@
+import ChatComponent from "./ChatComponent";
+import NavigationComponent from "./NavigationComponent";
 
-import ChatComponent from './ChatComponent'
-
-import '../App.css'
+import "../App.css";
 
 function App() {
 
   return (
-    <>
-      <div>
-        <ChatComponent />
+    <div>
+      {/* {alertVisible && <Alert children={"Shamboo"} onClick={() => setAlertVisibility(false)}></Alert>}
+      <MyBtn color="danger" children={"my Button"} onClick={() => setAlertVisibility(true)} /> */}
+      {/* <ChatComponent></ChatComponent> */}
+      <div className="chatComponent"><ChatComponent></ChatComponent></div>
+      <div className="navigation">
+        <NavigationComponent />
       </div>
-    </>
-  )
+    </div>
+  );
 }
 
 export default App;

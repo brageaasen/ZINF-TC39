@@ -1,9 +1,33 @@
 #root {
   margin: 0 auto;
-  text-align: center;
+  position: absolute;
   width: 100%;
 }
 
+.infoBox {
+  /* padding: 5%; */
+  border: 10%;
+  border-color: black;
+  border-style: solid;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.chatComponent {
+position: absolute;
+width: 80%;
+position: right;
+margin-left: 20%;
+}
+
+.navigation {
+  width: 20%;
+  position: absolute;
+  position:left;
+}
+
+/*
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -38,4 +62,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
