@@ -70,8 +70,8 @@ const ChatComponent = () => {
     }
   };
 
-  return (
-    <Container>
+  return (// make the bootom reach longer
+    <Container maxWidth="1g"  >
       {/* AppBar is the where the search bar is located. It contains a toolbar with the search bar.*/} 
       <AppBar position="static" style={{
           background: 'white',

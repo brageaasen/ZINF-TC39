@@ -3,9 +3,13 @@ import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import "../App.css";
 
-const RenderMarkdown = () => {
+interface Props {
+  content: string;
+}
+
+const RenderMarkdown = ({ content }: Props) => {
   const [markdownContent, setMarkdownContent] = useState("");
-  const file_name = "../public/meetings/2015-11/nov-17.md";
+  const file_name = content;
 
   useEffect(() => {
     const fetchMarkdown = async () => {
@@ -22,7 +26,7 @@ const RenderMarkdown = () => {
   }, [file_name]);
 
   return (
-    <div>
+    <div style={{ textAlign: "left" }}>
       <ReactMarkdown className="md">{markdownContent}</ReactMarkdown>
     </div>
   );
