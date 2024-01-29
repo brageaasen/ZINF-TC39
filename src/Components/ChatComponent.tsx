@@ -21,9 +21,11 @@ interface Message {
   content: string;
 }
 
-interface ChatComponentProps {}
+interface ChatComponentProps {
+  link: string | null;
+}
 
-const ChatComponent: React.FC<ChatComponentProps> = (props) => {
+const ChatComponent: React.FC<ChatComponentProps> = ({link = "../public/meetings/2012-05/may-21.md"}) => {
   // State for user input and chat messages
   const [input, setInput] = useState<string>('');
   const [messages, setMessages] = useState<Message[]>([]);
@@ -95,7 +97,7 @@ const ChatComponent: React.FC<ChatComponentProps> = (props) => {
        {/* This where left and right box is placed inside a grid/container */} 
       <Grid container spacing={1} style={{ marginTop: '10px' }}>
         {/* This is where LeftBoxContent is placed */} 
-        <LeftBoxContent/> 
+        <LeftBoxContent link={link}/> 
 
         {/* This where the GPT's response is output */} 
         <Grid item xs={6}>
