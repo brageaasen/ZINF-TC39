@@ -4,6 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 interface AppBarComponentProps {
   input: string;
+  //holders for handleInputChange, handleSendMessage, and handleClearMessages
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSendMessage: () => void;
   handleClearMessages: () => void;
